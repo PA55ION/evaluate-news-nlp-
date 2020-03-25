@@ -6,7 +6,7 @@ function handleSubmit(event) {
     Client.checkForName(url)
 
     console.log(":::Calling the external API:::");
-    fetch('http://localhost:8080/test')
+    fetch('http://localhost:8000/test')
     .then(res => res.json())
     .then(function(res) {
         console.log(res);
@@ -15,10 +15,7 @@ function handleSubmit(event) {
 
     let results = document.getElementById('results')
 
-    let text = document.createElement('P')
-    let article = document.createElement('P')
-
-    fetch('http://localhost:8080/api', {
+    fetch('http://localhost:8000/api', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

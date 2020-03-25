@@ -1,6 +1,2 @@
-// const app = require('./index')
-
-
-// app.listen(8080, function () {
-//     console.log('Example app listening on port 8000!')
-// })
+const app = require('../server/index')
+app.listen(3000)
