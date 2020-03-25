@@ -39,8 +39,9 @@ app.get('/', function (req, res) {
 // })
 
 app.get('/test', function (req, res) {
-    res.send(mockAPIResponse);
-   
+    res.send(mockAPIResponse)
+
+  
 })
 
 
@@ -56,3 +57,4 @@ app.post('/api', (req, res) => {
     })
 })
 
+module.exports = app
