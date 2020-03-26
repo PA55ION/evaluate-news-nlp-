@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
 
 $font-stack: 'Inter', sans-serif;
-$primary-color: #333;
+$primary-color: #212121;
+
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+}
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: $font-stack;
+    @include linearGradient( #d9a7c7, #fffcdc);
+    color: $primary-color;
 }
 
 main {
@@ -19,7 +31,8 @@ section {
     margin: 50px auto;
 }
 
-#result {
-    line-height: 50;
-    letter-spacing: 10px;
-}
+
+// #result {
+//     line-height: 50;
+//     letter-spacing: 10px;
+// }

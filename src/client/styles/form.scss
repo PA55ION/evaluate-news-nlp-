@@ -2,11 +2,32 @@ form {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
+
+    input {
+        padding: 5px 20px;
+        width: 100%;
+        line-height: 24px;
+        margin: 10px 0;
+    }
+
+    #btn {
+        font-size: 20px;
+        text-transform: capitalize;
+        border: 2px solid white;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        cursor: pointer;
+        display: block;
+        margin: 30px auto;
+        width: 33%;
+        padding: 10px 10px;
+    }
 }
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
-}
+#btn:hover {
+        background-color: #FF6060;
+        color: white;
+    }

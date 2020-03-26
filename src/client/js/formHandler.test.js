@@ -17,8 +17,8 @@ describe('POST /api', function() {
     request(app)
       .post('/api')
       .send({url: 'https://google.com'})
-      .set('Content-Type', 'application/json')
-      // .expect('Content-Type', /json/)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
       .expect(200)
       .end(function(err, res) {
         if (err) return done(err);

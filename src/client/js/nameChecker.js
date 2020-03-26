@@ -19,16 +19,3 @@ function checkForName(inputText) {
 export { checkForName }
 
 
-// function checkForName(inputText) {
-//     console.log("::: Running checkForName :::", inputText);
-//     let url = ''
-
-//     if(url.includes(inputText)) {
-//         alert("Welcome, Captain!");
-//     }
-//     else {
-//         alert("Please enter correct web address")
-//     }
-// }
-
-// export { checkForName }

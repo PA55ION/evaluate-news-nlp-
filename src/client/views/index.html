@@ -8,25 +8,24 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
+            <div class="logo">
+                <img src="https://img.icons8.com/bubbles/100/000000/web.png"/>
             </div>
-            <div class="">
+            <!-- <div class="">
                 navigation
-            </div>
+            </div> -->
         </header>
 
         <main>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+                <form class="form" onsubmit="return Client.handleSubmit(event)">
                     <input id="url" type="text" name="input" value="" onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter web address here'" placeholder="Enter web address here">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmitE(event)">
+                    <input type="submit" name="button" id="btn" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmitE(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
                 <div id="results"></div>
             </section>
         </main>
@@ -35,7 +34,7 @@
             <p>Udacity project made by Mai</p>
         </footer>
 
-        <!-- <script>
+        <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
                 // Use the window load event to keep the page load performant
@@ -43,7 +42,7 @@
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-        </script> -->
+        </script>
 
     </body>
 </html>
