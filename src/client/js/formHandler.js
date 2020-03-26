@@ -10,7 +10,7 @@ function handleSubmit(event) {
     .then(res => res.json())
     .then(function(res) {
         console.log(res);
-        document.getElementById('results').innerHTML = res.message
+        document.getElementById('results').innerHTML = res.message + '<br>'
     });
 
     let results = document.getElementById('results')
