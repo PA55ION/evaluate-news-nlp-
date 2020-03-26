@@ -3,7 +3,7 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let url = document.getElementById('url').value
-    Client.checkForName(url)
+    Client.validateUrl(url)
 
     console.log(":::Calling the external API:::");
     fetch('http://localhost:8000/test')

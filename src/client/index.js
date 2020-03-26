@@ -1,14 +1,14 @@
-import { checkForName } from './js/nameChecker'
+import { validateUrl } from './js/validateForm'
 import { handleSubmit } from './js/formHandler'
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/form.scss'
 import './styles/footer.scss'
 import './styles/header.scss'
-console.log(checkForName);
+console.log(validateUrl);
 
 
 export {
-    checkForName,
+    validateUrl,
     handleSubmit
 }
