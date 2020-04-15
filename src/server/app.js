@@ -1,5 +1,9 @@
 const app = require('../server/index')
 
-app.listen(8000, function () {
-    console.log('Example app listening on port 8000!')
-});
+const port = process.env.PORT || 8000;
+const server = app.listen(port, listening);
+
+
+function listening() {
+    console.log(`running on localhost: ${port}`)
+}
