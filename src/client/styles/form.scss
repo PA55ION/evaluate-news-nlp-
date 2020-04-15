@@ -9,25 +9,79 @@ form {
         line-height: 24px;
         margin: 10px 0;
     }
+}
 
-    #btn {
+// #btn {
+//     font-size: 20px;
+//     text-transform: capitalize;
+//     color: #ffffff;
+//     border-radius: 4px;
+//     -webkit-border-radius: 4px;
+//     -moz-border-radius: 4px;
+//     -ms-border-radius: 4px;
+//     -o-border-radius: 4px;
+//     cursor: pointer;
+//     display: block;
+//     margin: 30px auto;
+//     width: 33%;
+//     padding: 10px 10px;
+//     background-color: #131720;
+// }
+// &:hover {
+//     cursor: pointer;
+//     background: linear-gradient(to right, #4568dc, #b06ab3);
+//     -webkit-animation-name: pulse;
+//     animation-name: pulse;
+//     animation-duration: 1s;
+//     animation-timing-function: ease;
+//     animation-delay: 0s;
+//     animation-iteration-count: 1;
+//     animation-direction: normal;
+//     animation-fill-mode: none;
+// } 
+
+#btn {
         font-size: 20px;
         text-transform: capitalize;
-        border: 2px solid white;
-        border-radius: 15px;
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        -o-border-radius: 15px;
+        color: #ffffff;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
         cursor: pointer;
         display: block;
         margin: 30px auto;
         width: 33%;
         padding: 10px 10px;
+        background-color: #131720;
+
+    &:hover {
+        cursor: pointer;
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
     }
 }
 
-#btn:hover {
-        background: #ff937b;
-        color: white;
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
