@@ -1,5 +1,5 @@
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
@@ -7,7 +7,9 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 var aylien = require("aylien_textapi");
 
-if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+if (process.env.NODE_ENV !== 'production') { 
+    require('dotenv').config()
+ }
 
 
 // set aylien API credentials
