@@ -1,4 +1,4 @@
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
 dotenv.config();
 var path = require('path')
 const express = require('express')
@@ -6,6 +6,9 @@ const mockAPIResponse = require('./mockAPI.js')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 var aylien = require("aylien_textapi");
+
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+
 
 // set aylien API credentials
 // NOTICE that textapi is the name I used, but it is arbitrary.
@@ -24,6 +27,13 @@ app.use(cors())
 app.use(express.static('dist'))
 
 console.log(__dirname)
+
+app.use('/*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, x-access-token, x-user-pathway, x-mongo-key, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT");
+    next();
+  });
 
 
 
